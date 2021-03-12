@@ -43,12 +43,12 @@ def add_use(token):
 class Text(Resource):
     def get(self):
         if not 'Authorization' in request.headers:
-            return abort(400, message="Not authorized")
+            return abort(401, message="Not authorized")
 
         token = request.headers['Authorization']
 
         if not account_handler.Account.get(token=token):
-            return abort(400, message="Invalid authorization")
+            return abort(401, message="Invalid authorization")
         
         if check_ratelimit(token):
             return abort(429, message="You have exceeded the maximum allowed requests for your account.")
@@ -60,12 +60,12 @@ class Text(Resource):
 class Word(Resource):
     def get(self):
         if not 'Authorization' in request.headers:
-            return abort(400, message="Not authorized")
+            return abort(401, message="Not authorized")
 
         token = request.headers['Authorization']
 
         if not account_handler.Account.get(token=token):
-            return abort(400, message="Invalid authorization")
+            return abort(401, message="Invalid authorization")
         
         if check_ratelimit(token):
             return abort(429, message="You have exceeded the maximum allowed requests for your account.")
@@ -78,12 +78,12 @@ class Word(Resource):
 class Madlibs(Resource):
     def get(self):
         if not 'Authorization' in request.headers:
-            return abort(400, message="Not authorized")
+            return abort(401, message="Not authorized")
 
         token = request.headers['Authorization']
 
         if not account_handler.Account.get(token=token):
-            return abort(400, message="Invalid authorization")
+            return abort(401, message="Invalid authorization")
         
         if check_ratelimit(token):
             return abort(429, message="You have exceeded the maximum allowed requests for your account.")
@@ -95,29 +95,29 @@ class Madlibs(Resource):
 class Meme(Resource):
     def get(self):
         if not 'Authorization' in request.headers:
-            return abort(400, message="Not authorized")
+            return abort(401, message="Not authorized")
 
         token = request.headers['Authorization']
 
         if not account_handler.Account.get(token=token):
-            return abort(400, message="Invalid authorization")
+            return abort(401, message="Invalid authorization")
         
         if check_ratelimit(token):
             return abort(429, message="You have exceeded the maximum allowed requests for your account.")
 
         else:
             add_use(token)
-            return reddit_client.get(limit=100)
+            return reddit_client.get(limit=50)
 
 class Reddit(Resource):
     def get(self):
         if not 'Authorization' in request.headers:
-            return abort(400, message="Not authorized")
+            return abort(401, message="Not authorized")
 
         token = request.headers['Authorization']
 
         if not account_handler.Account.get(token=token):
-            return abort(400, message="Invalid authorization")
+            return abort(401, message="Invalid authorization")
         
         if check_ratelimit(token):
             return abort(429, message="You have exceeded the maximum allowed requests for your account.")
@@ -146,12 +146,12 @@ class Reddit(Resource):
 class Lyrics(Resource):
     def get(self):
         if not 'Authorization' in request.headers:
-            return abort(400, message="Not authorized")
+            return abort(401, message="Not authorized")
 
         token = request.headers['Authorization']
 
         if not account_handler.Account.get(token=token):
-            return abort(400, message="Invalid authorization")
+            return abort(401, message="Invalid authorization")
         
         if check_ratelimit(token):
             return abort(429, message="You have exceeded the maximum allowed requests for your account.")
