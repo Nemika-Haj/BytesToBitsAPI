@@ -32,4 +32,4 @@ You are free to create a wrapper for our API. You can later create a PR with it 
 
 ### **Unofficial Wrappers**
 - [b2bapi](https://github.com/doublevcodes/b2bapi) - By **[doublevcodes](https://github.com/doublevcodes)**
-- [btbpug](https://github.com/Pug234/btb.py) - By **[Pug234](https://github.com/Pug234)**
+- [btbpython](https://github.com/Pug234/btb.py) - By **[Pug234](https://github.com/Pug234)**
