@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BytesToBits API. Free-to-use endpoints to use in your application.">
+    <meta name="robots">
+    <meta property="og:title" content="BytesToBits API">
+    <meta property="og:description" content="BytesToBits API. Free-to-use endpoints to use in your application.">
+    <meta property="og:image" content="{{url_for('static', filename='assets/banner.png')}}">
+    <meta property="og:url" content="{{url_for('index')}}">
+    <meta property="og:site_name" content="api.bytestobits.dev">
+    <meta name="twitter:title" content="BytesToBits API">
+    <meta name="twitter:description" content="BytesToBits API. Free-to-use endpoints to use in your application.">
+    <meta name="twitter:image:alt" content="BytesToBits API">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@BytesToBits1">
+    <link rel="icon" href="{{url_for('static', filename='assets/BTBAPIRound.png')}}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/prism.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/base.css')}}">
+    <title>Home | BytesToBits API</title>
+  </head>
+  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/12.0.4/markdown-it.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="{{url_for('static', filename='js/prism.js')}}"></script>
+    <div class="container">
+      <div class="card">
+        <div class="card-body">
+          <div class="card-top">
+            <h3 class="mb-2 mt-5 ms-5">BytesToBits</h3>{% if not session %}<a class="btn btn-primary ms-auto mt-5 mb-2" href="{{url_for('login')}}">Login</a>{% elif 'authorized' in session %}<a class="btn btn-primary ms-auto mt-5 mb-2" href="{{url_for('account_routes.index')}}">Account </a>{% else %}<a class="btn btn-primary ms-auto mt-5 mb-2" href="{{url_for('login')}}">Login</a>{% endif %}
+          </div>
+          <h1 class="ms-5 thin">A Powerful, Free-to-use API.</h1>
+          <h2 class="mt-5 ms-5 thin">How to use</h2>
+          <hr class="ms-5">
+          <p class="text ms-5">BytesToBits API requires an API token. In order to gain one, please create an account [here]({{url_for('register')}}). There is a maximum of __50 requests per minute__. Surpassing this limit will get your token temporarily blocked from the API. Continuous overuse might lead to a permanent account suspension.</p><br>
+          <h3 class="text ms-5 thin">Python Example</h3>
+          <hr class="ms-5">
+          <pre class="ms-5 rounded shadow-lg"><code class="language-python">{{examples["example.py"]}}
+</code></pre>
+          <h2 class="mt-5 ms-5 thin">API Endpoints</h2>
+          <hr class="ms-5">
+          <p class="text ms-5">These are the available API Endpoints __as of now__.</p>
+          <p class="text ms-5">- /text/</p>
+          <p class="text ms-5">- /madlibs/</p>
+          <p class="text ms-5">- /lyrics/</p>
+          <p class="text ms-5">- /meme/</p>
+          <p class="text ms-5">- /reddit/</p>
+          <p class="text ms-5">- /word/</p>
+          <h2 class="mt-5 ms-5 thin"></h2>
+        </div>
+      </div>
+    </div>
+    <script>
+      const md = window.markdownit();
+      
+      const elements = document.getElementsByClassName('text');
+      
+      for(var i = 0; i < elements.length; i++){
+      
+          elements[i].innerHTML = md.render(elements[i].innerHTML)
+      
+      }
+    </script>
+  </body>
+</html>

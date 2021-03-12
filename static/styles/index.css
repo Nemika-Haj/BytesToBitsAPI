@@ -1,0 +1,19 @@
+.thin {
+  font-weight: 300;
+}
+
+.text {
+  margin-bottom: -15px;
+}
+
+hr {
+  max-width: 20rem;
+}
+
+.card-top {
+  display: flex;
+  flex-direction: row;
+}
+.card-top a {
+  height: 100%;
+}

@@ -1,0 +1,28 @@
+extends base.pug
+
+block title 
+    title Account | #{siteName}
+
+block content 
+    .container 
+        .card 
+            .card-body
+                +header({title:"Account"})
+                | {% if success %}
+                .alert.alert-success.ms-5.mb-1 {{success}}
+                | {% endif %}
+                +text({lines: [
+                    "This is your account page. Here, you can view your account's API token. You can also regenerate it in case it has been leaked."
+                ]})
+
+                h5.thin.mt-5.ms-5 Email: {{session["account"]}}
+                h5.thin.mt-3.ms-5 API Token: {{account["token"] if "token" in account else "None"}}
+                | {% if 'limit' in account %}
+                h5.thin.mt-3.ms-5 Max Requests/min: {{account["limit"]}}
+                | {% endif %}
+                | {% if 'uses' in account %}
+                h5.thin.mt-3.ms-5 Uses: {{account["uses"]}}
+                | {% endif %}
+                form.ms-5(action="/account/", method="POST")
+                    input.btn.btn-success(type="submit" value="Generate new token!")
+                    a.btn.btn-danger.ms-1(href="{{url_for('logout')}}") Logout

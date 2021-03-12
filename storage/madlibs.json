@@ -1,0 +1,289 @@
+[
+  {
+      "title": "Be Kind",
+      "variables": [
+          "Noun",
+          "Noun (Plural)",
+          "Noun",
+          "Place",
+          "Adjective",
+          "Noun"
+      ],
+      "text": "Be kind to your {0}-footed {1}\nFor a duck may be somebody's {2}.\nBe kind to your {0} in {3}.\nWhere the weather is always {4}.\nYou may think that this is the {5},\nWell it is.",
+      "questions": 6
+  },
+  {
+      "title": "Football Broadcast",
+      "variables": [
+          "Animal (Plural)",
+          "Noun (Plural)",
+          "Noun",
+          "Celebrity",
+          "Noun",
+          "Part of the Body",
+          "Number",
+          "Celebrity",
+          "Adjective",
+          "Celebrity",
+          "Adjective",
+          "Noun",
+          "Noun",
+          "Verb ending in \"ING\""
+      ],
+      "text": "Good afternoon, ladies and gentlemen. This is your favorite sportscaster bringing you the big football game between the Columbia University {0} and the West Point {1}. The center has just snapped the {2} back to the Columbia star halfback, {3}, who is running their own left {4}. There they are tackled hard around the {5}.\nNow it's West Point's ball and {6} to go. They're coming out of the huddle. The ball is snapped back to {7}, who fades back and throws a long, {8} pass that is caught by {9}, who is West Point's {10} quarterback.\nThey're in the clear, and as they race over the {11} for a touchdown. No, no, wait! The referee is calling the play back to the thirty-five-{12} line. He's going to penalize West Point for {13}",
+      "questions": 14
+  },
+  {
+      "title": "Letter From Camp",
+      "variables": [
+          "Relative",
+          "Adjective",
+          "Adjective",
+          "Adjective",
+          "Name of person in room",
+          "Adjective",
+          "Adjective",
+          "Verb ending in \"ED\"",
+          "Body Part",
+          "Verb ending in \"ING\"",
+          "Noun (Plural)",
+          "Noun",
+          "Adverb",
+          "Verb",
+          "Verb",
+          "Relative",
+          "Person in room"
+      ],
+      "text": "Dear {0},\nI am having a(n) {1} time at camp. The counselor is {2} and the food is {3}. I met {4}. and we became {5} friends.\nUnfortunately, {4} is {6} and I {7} my {8} to we couldn't go {9} like everybody else. I need more {10} and a {11} sharpener, so please {12} {13} more when you {14} back.\nYour {15},\n{16}",
+      "questions": 17
+  },
+  {
+      "title": "Love Letter 4",
+      "variables": [
+          "Person in room",
+          "Adjective",
+          "Verb",
+          "Part of the Body",
+          "Number",
+          "Noun",
+          "Adverb",
+          "Verb",
+          "Pronoun Plural",
+          "Other person in room"
+      ],
+      "text": "Dear {0}\nYou are extremely {1} and I {2} you! I want to kiss your {3} {4} times. You make my {5} burn with desire. When I first saw you I {6} stared at you and fell in love. Will you {7} out with me? Don't let your parents discourage you, {8} are just jealous.\nYours forever, {9}",
+      "questions": 10
+  },
+  {
+      "title": "Personal Ad",
+      "variables": [
+          "Adjective",
+          "Verb ending in \"ED\"",
+          "Noun (Plural)",
+          "Liquid",
+          "Noun (Plural)",
+          "Famous Person",
+          "Place",
+          "Occupation",
+          "Noun",
+          "Nationality",
+          "Female Celebrity",
+          "Noun",
+          "Female Friend",
+          "Noun",
+          "Number",
+          "Adjective"
+      ],
+      "text": "I enjoy long, {0} walks on the beach, getting {1} in the rain and serendipitous encounters with {2}. I really like piña coladas mixed with {3}, and romantic, candle-lit {4}. I am well-read from Dr Seuss to {5}. I travel frequently, especially to {6}, when I am not busy with work. (I am a {7}.) I am looking for {8} and beautify in the form of a {9} goddess. She should have the physique of {10} and the {11} of {12}. I would prefer if she knew how to cook, clean, and wash my {13}. I know I'm not very attractive in my picture, but it was taken {14} days ago, and I have since become more {15}.",
+      "questions": 16
+  },
+  {
+      "title": "Romeo and Juliet: Prologue",
+      "variables": [
+          "Noun (Plural)",
+          "Place",
+          "Noun",
+          "Noun (Plural)",
+          "Noun",
+          "Adjective",
+          "Verb",
+          "Number",
+          "Adjective",
+          "Body Part",
+          "Verb"
+      ],
+      "text": "Two {0}, both alike in dignity,\nIn fair {1}, where we lay our scene,\nFrom ancient {2} break to new mutiny,\nWhere civil blood makes civil hands unclean.\nFrom forth the fatal loins of these two foes\nA pair of star-corss'd {3} take their life;\nWhole misadventured piteous overthrows\nDo with their {4} bury their parents' strife.\nThe fearful passage of their {5} love,\nAnd the continuance of their parents' rage,\nWhich, but their children's end, nought could {6},\nIs now the {7} hours' raffic of our stage;\nThe which if you with {8} {9} attend,\nWhat here shall {10}, our toil shall strive to mend.",
+      "questions": 11
+  },
+  {
+      "title": "Rush Hour 3",
+      "variables": [
+          "Number",
+          "Occupation",
+          "Occupation",
+          "Place",
+          "Person in room (male)",
+          "Occupation",
+          "Body Part",
+          "Adjective",
+          "Noun",
+          "Body Part",
+          "Celebrity",
+          "Verb ending in \"ING\"",
+          "Adverb",
+          "Verb ending in \"S\""
+      ],
+      "text": "{0} years after the end of Rush Hour 2, James Carter is no longer a {1}, but a {2} on the streets of {3}. Lee is now the bodyguard for his friend {4}. Lee is still upset with Carter about an incident in {3} when Carter accidentally shot Lee's girlfriend, {5} Isabella Molina, in the {6}.\n\nDuring the World Criminal Court discussions, as {4} addresses the importance to fight the Triad, he announces that he knows the {7} of the Triad leadership known as the Shy Shen. Suddenly, {4} takes a {8} in the {9}, distrupting the conference. Lee pursues the assassin and corners him, discovering that the assassin is his brother, {10}. When Lee hesitates to shoot {10}, Carter shows up {11} towards the two {12} {13} Lee over, allowing {10} to escape.",
+      "questions": 14
+  },
+  {
+      "title": "Sick Note",
+      "variables": [
+          "Silly Word",
+          "Last Name",
+          "Illness",
+          "Noun (Plural)",
+          "Adjective",
+          "Adjective",
+          "Silly Word",
+          "Place",
+          "Numbers"
+      ],
+      "text": "Dear School Nurse,\n{0} {1} will not be attending school today. He/she has come down with a case of {2} and has horrible {3} and a/an {4} fever. We have made an appointment with the {5} Dr {6}, who has studied for many years in {7} and has {8} degrees in pediatrics. He will send you all the information you need. Thank you!\nSincerely,\nMrs. {5}",
+      "questions": 9
+  },
+  {
+      "title": "The Walmart Difference",
+      "variables": [
+          "Verb",
+          "Adjective",
+          "Noun (Plural)",
+          "Adjective",
+          "Verb ending in \"ING\"",
+          "Verb",
+          "Number",
+          "Adjective",
+          "Noun (Plural)",
+          "Noun (Plural)",
+          "Noun (Plural)",
+          "Relative (Plural)",
+          "Adjective",
+          "Adjective",
+          "Noun (Plural)"
+      ],
+      "text": "Come {0} at WALMART, where you'll receive {1} discounts on all of your favorite brand name {2}. Our {3} and {4} associates are there to {5} you {6} hours a day. Here you will find {7} prices on the {8} you need. {9} for the moms, {10} for the kids and all the latest electronics for the {11}. So come on down to your {12} {13} WALMART where the {14} come first.",
+      "questions": 15
+  },
+  {
+      "title": "War",
+      "variables": [
+          "Noun",
+          "Noun",
+          "Noun",
+          "Occupation",
+          "Verb",
+          "Place",
+          "Verb ending in \"ED\"",
+          "Noun",
+          "Verb ending in \"ING\"",
+          "Noun (Plural)",
+          "Noun",
+          "Emotion"
+      ],
+      "text": "It was during the battle of {0} when I was running through a {1} when a {2} went off right to my platoon. Our {3} yelled for us to {4} to the nearest {5} we could find. When we got to the {5}, we {6} to start a fire. As we were starting the fire the enemy saw the {7} from the fire and started {8} {9} at us. We all quickly ducked behind the {10} at the {5} and returned fire. We quickly eliminated the enemy and were {11} that we won the battle.",
+      "questions": 12
+  },
+  {
+  	"title": "Runaway Bribe Proposal",
+  	"variables": [
+  		"Adjective",
+  		"Noun",
+  		"Number",
+  		"Noun",
+  		"Adjective",
+  		"Verb",
+  		"Noun",
+  		"Body Part",
+  		"Adjective"
+  	],
+  	"text": "Look, I guarantee there'll be {0} times. I guarantee that at some {1}, {2} or both of us is gonna want to get out of this {3}. But I also guarantee that if I don't ask you to be {4}, I'll {5} it for the rest of my {6}, because I know, in my {7}, you're the {8} one for me.",
+  	"questions": 9
+  },
+  {
+  	"title": "Dragons",
+  	"variables": [
+  		"Color",
+  		"Superlative ending in \"EST\"",
+  		"Adjective",
+  		"Body Part (Plural)",
+  		"Body Part",
+  		"Noun",
+  		"Animal (Plural)",
+  		"Adjective",
+  		"Adjective",
+  		"Adjective"
+  	],
+  	"text": "The {0} Dragon is the {1} Dragon of all. It has {2} {3}, and a {4} shaped like a {5}. It loves to eat {6}, although it will feast on nearly anything. It is {7} and {8}. You must be {9} around it, or you may end up as it's meal!",
+  	"questions": 10
+  },
+  {
+    "title": "Heart In Motion (Amy Grant)",
+    "variables": [
+        "Sound",
+        "Verb ending in \"S\"",
+        "Adjective",
+        "Verb",
+        "Color",
+        "Famous Person",
+        "Noun",
+        "Noun",
+        "Verb ending in \"ING\"",
+        "Verb ending in \"ING\"",
+        "Noun",
+        "Noun",
+        "Adverb",
+        "Noun",
+        "Noun",
+        "Verb",
+        "Verb",
+        "Type of measurement"
+    ],
+    "text": "Every {0} {1} your name\nLoud and {2} they {3} my claim\nMy {4} blood runs true blue\nAnd every {0} belongs to {5}.\nClassic case of {6} meets {7}\n{8} in the same direction\nYou're not {9} for the {10}\nI'm not {9} for perfection.\nJust a {11} that's {12} designed\nFor passing the {13} of {14}\nI'm here to {15} you\nI'm here to {16}\nEvery hour, every {17}.",
+    "questions": 18
+	},
+	{
+    "title": "Can I Have Your Daughter's Hand?",
+    "variables": [
+        "Silly Name",
+        "Silly Word",
+        "Verb",
+        "Noun",
+        "Body Part (Plural)",
+        "Female Name",
+        "Verb ending in \"ED\"",
+        "Noun",
+        "Noun (Plural)",
+        "Verb",
+        "Noun",
+        "Occupation",
+        "Number",
+        "Verb",
+        "Silly Word",
+        "Silly Name"
+    ],
+    "text": "Dear Mr. and Mrs. {0} {1},\nWill you let me {2} your {3}? Ever since I have laid {4} on {5}, I have {6} madly in love with her. I wish that she will be the {7} of my {8} and that someday we will {9} happily ever after. I have a {10} as a/an {11} that pays ${12} each month. I promise to {13} {5} with kindness and respect.\nSincerely,\n{14} {15}",
+    "questions": 16
+	},
+	{
+    "title": "There Was An Old Woman",
+    "variables": [
+        "Adjective",
+        "Noun",
+        "Noun (Plural)",
+        "Noun",
+        "Verb ending in \"ED\""
+    ],
+    "text": "There was an {0} woman who lived in a/an {1}.\nShe had so many {2} she didn't know what to do.\nShe gave them some broth without any {3}.\nShe {4} them all soundly and put them to bed.",
+    "questions": 5
+	}
+]
