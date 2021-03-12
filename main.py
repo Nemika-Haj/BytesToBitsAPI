@@ -21,7 +21,7 @@ Load API Endpoints
 api.add_resource(Text, *["/text", "/text/"])
 api.add_resource(Word, *["/word", "/word/"])
 api.add_resource(Reddit, *["/reddit", "/reddit/"])
-api.add_resource(Meme, *["/reddit", "/reddit/"])
+api.add_resource(Meme, *["/meme", "/meme/"])
 api.add_resource(Lyrics, *["/lyrics", "/lyrics/"])
 api.add_resource(Madlibs, *["/madlibs", "/madlibs/"])
 
