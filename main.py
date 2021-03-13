@@ -10,7 +10,7 @@ import os
 
 from account_routes import account_routes
 
-from api.endpoints import Text, Word, Reddit, Meme, Lyrics, Madlibs
+from api.endpoints import Text, Word, Reddit, Meme, Lyrics, Madlibs, TokenInfo
 
 app = Flask(__name__)
 api = Api(app)
@@ -24,6 +24,7 @@ api.add_resource(Reddit, *["/reddit", "/reddit/"])
 api.add_resource(Meme, *["/meme", "/meme/"])
 api.add_resource(Lyrics, *["/lyrics", "/lyrics/"])
 api.add_resource(Madlibs, *["/madlibs", "/madlibs/"])
+api.add_resource(TokenInfo, *["/info", "/info/"])
 
 app.secret_key = os.urandom(24)
 

@@ -1,7 +1,7 @@
 from flask import request
 from flask_restful import Resource, abort
 
-import random, requests, json
+import random, json
 
 from PyJS import JSON
 from PyJS.modules import fs
@@ -39,6 +39,23 @@ def add_use(token):
             "uses": 1
         }
     })
+
+class TokenInfo(Resource):
+    def get(self):
+        if not 'Authorization' in request.headers:
+            return abort(401, message="Not authorized")
+        
+        token = request.headers['Authorization']
+
+        account = account_handler.Account.get(token=token)
+
+        if not account:
+            return abort(401, message="Invalid authorization")
+
+        return {
+            "uses": account["uses"],
+            "limit": account["limit"]
+        }
 
 class Text(Resource):
     def get(self):
