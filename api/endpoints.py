@@ -1,20 +1,25 @@
+"""
+Import base modules needed
+for endpoint operation
+"""
+
 from flask import request
 from flask_restful import Resource, abort
 
-import random, json
+import random, datetime
 
 from PyJS import JSON
 from PyJS.modules import fs
 
 from handlers import account_handler, reddit_handler, genius_handler
 
-reddit_config = JSON.parse(fs.createReadStream("data/reddit_config.json"))
-
-reddit_client = reddit_handler.RedditHandler(**reddit_config)
-
-def fetch(fp, text=True):
-    with open(f"storage/{fp}", "r") as f:
-        return json.load(f) if not text else f.read()
+"""
+Load configuration &
+create base functions
+"""
+def fetch(fp, text=False):
+    with open(fp, "r") as f:
+        return JSON.parse(fs.createReadStream(fp)) if not text else f.read()
 
 def check_ratelimit(token):
     account = account_handler.Account.get(token=token)
@@ -40,8 +45,29 @@ def add_use(token):
         }
     })
 
+reddit_client = reddit_handler.RedditHandler(**fetch("data/reddit_config.json"))
+
+start_time = datetime.datetime.now()
+next_reset = datetime.datetime.now()+datetime.timedelta(seconds=64)
+
+def update_timers():
+    global start_time, next_reset
+    start_time = datetime.datetime.now()
+    next_reset = datetime.datetime.now()+datetime.timedelta(seconds=60)
+
+# Rate limit handler
+def clear():
+    if datetime.datetime.now()>= next_reset:
+        account_handler.accounts.update_many({}, {"$set": {"uses":0}})
+        print("Uses were reset")
+        update_timers()
+
+"""
+Create endpoints
+"""
 class TokenInfo(Resource):
     def get(self):
+        clear()
         if not 'Authorization' in request.headers:
             return abort(401, message="Not authorized")
         
@@ -54,11 +80,13 @@ class TokenInfo(Resource):
 
         return {
             "uses": account["uses"],
-            "limit": account["limit"]
+            "limit": account["limit"],
+            "next_reset": (next_reset-datetime.datetime.now()).seconds
         }
 
 class Text(Resource):
     def get(self):
+        clear()
         if not 'Authorization' in request.headers:
             return abort(401, message="Not authorized")
 
@@ -72,10 +100,11 @@ class Text(Resource):
 
         else:
             add_use(token)
-            return random.choice(fetch("texts.txt").split("\n\n"))
+            return random.choice(fetch("storage/texts.txt", text=True).split("\n\n"))
 
 class Word(Resource):
     def get(self):
+        clear()
         if not 'Authorization' in request.headers:
             return abort(401, message="Not authorized")
 
@@ -94,6 +123,7 @@ class Word(Resource):
 
 class Madlibs(Resource):
     def get(self):
+        clear()
         if not 'Authorization' in request.headers:
             return abort(401, message="Not authorized")
 
@@ -107,10 +137,11 @@ class Madlibs(Resource):
 
         else:
             add_use(token)
-            return random.choice(fetch("madlibs.json", False))
+            return random.choice(fetch("storage/madlibs.json"))
 
 class Meme(Resource):
     def get(self):
+        clear()
         if not 'Authorization' in request.headers:
             return abort(401, message="Not authorized")
 
@@ -128,6 +159,7 @@ class Meme(Resource):
 
 class Reddit(Resource):
     def get(self):
+        clear()
         if not 'Authorization' in request.headers:
             return abort(401, message="Not authorized")
 
@@ -162,6 +194,7 @@ class Reddit(Resource):
 
 class Lyrics(Resource):
     def get(self):
+        clear()
         if not 'Authorization' in request.headers:
             return abort(401, message="Not authorized")
 

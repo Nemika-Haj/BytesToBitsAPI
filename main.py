@@ -3,7 +3,7 @@ from flask_restful import Api
 
 from PyJS.modules import fs
 
-from handlers import route_handler as routes, _security as security, limit_handler
+from handlers import route_handler as routes, _security as security
 from handlers.account_handler import Account as accounts
 
 import os
@@ -105,7 +105,5 @@ def register():
         accounts.create(email=form["email"], password=password)
 
         return redirect(url_for('login'))
-
-limit_handler.start()
 
 app.run(debug=True)
