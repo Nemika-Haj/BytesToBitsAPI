@@ -1,5 +1,6 @@
 from flask import Flask, render_template, redirect, url_for, request, session
 from flask_restful import Api
+from flask_cors import CORS
 
 from PyJS.modules import fs
 
@@ -14,6 +15,7 @@ from api.endpoints import Text, Word, Reddit, Meme, Lyrics, Madlibs, TokenInfo
 
 app = Flask(__name__)
 api = Api(app)
+CORS(app)
 
 """
 Load API Endpoints
