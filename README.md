@@ -1,3 +1,6 @@
+> **This API repository is deprecated. Please check the BytesToBits Github organization for the updated version**
+> *The api will remain active until the **June 3rd, 2022***
+
 # BytesToBits API
 This is the **official** BytesToBits API. You can freely explore the API or host it for yourself as long as our name is mentioned in it and you abide by the `Apache License 2.0` terms.
 
